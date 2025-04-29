@@ -55,7 +55,7 @@ const Product: FC<ProductsProps> = (props) => {
         <div className="title">
           <h3>{props.title}</h3>
         </div>
-        <img src={props.image} alt={props.title} />
+        <img loading="lazy" src={props.image} alt={props.title} />
         <div className="rate">
           {stars()}
           <h4>{props.price} $ </h4>

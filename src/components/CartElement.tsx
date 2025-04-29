@@ -48,7 +48,7 @@ const CartElement: FC<ProductsProps> = (props) => {
     <>
       <div className="cart-element">
         <div className="cart-info">
-          <img src={props.image} alt={props.title} />
+          <img loading="lazy" src={props.image} alt={props.title} />
           <div className="element-info">
             <div className="title">
               <h3>{props.title}</h3>

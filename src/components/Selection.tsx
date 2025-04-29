@@ -11,7 +11,7 @@ const Selection: FC<SelectionProps> = (props) => {
     <>
       <div className="card selection">
         <h3>{props.title}</h3>
-        <img src={props.image} alt={props.title} />
+        <img loading="lazy" src={props.image} alt={props.title} />
 
         <button
           onClick={() => {
