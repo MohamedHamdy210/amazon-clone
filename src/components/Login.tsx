@@ -3,7 +3,14 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import amazonLogo from "../assets/amazon-logo.png";
 import { useAppDispatch } from "../features/hooks";
+interface FormElements extends HTMLFormControlsCollection {
+  email: HTMLInputElement;
+  password: HTMLInputElement;
+}
 
+interface SignInFormElement extends HTMLFormElement {
+  elements: FormElements;
+}
 export default function Login() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
@@ -30,7 +37,7 @@ export default function Login() {
       }
     }
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<SignInFormElement>) => {
     event.preventDefault();
     const formEl = event.currentTarget;
     const formData = new FormData(formEl);

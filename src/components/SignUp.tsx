@@ -3,6 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import { useAppDispatch } from "../features/hooks";
+interface FormElements extends HTMLFormControlsCollection {
+  email: HTMLInputElement;
+  password: HTMLInputElement;
+}
+
+interface SignUpFormElement extends HTMLFormElement {
+  elements: FormElements;
+}
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -29,7 +37,8 @@ export default function SignUp() {
       }
     }
   };
-  const handleSubmit = (event) => {
+
+  const handleSubmit = (event: React.FormEvent<SignUpFormElement>) => {
     event.preventDefault();
     const formEl = event.currentTarget;
     const formData = new FormData(formEl);
