@@ -1,5 +1,5 @@
 import products from "../items";
-import {  useAppSelector } from "../features/hooks";
+import { useAppSelector } from "../features/hooks";
 import CartElement from "./CartElement";
 import banner from "../assets/banner.png";
 export default function Cart() {

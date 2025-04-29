@@ -6,11 +6,8 @@ import StarIcon from "@mui/icons-material/Star";
 import AddIcon from "@mui/icons-material/Add";
 
 const CartElement: FC<ProductsProps> = (props) => {
-  //   const [cartAmount, setCartAmount] = useState(props.amount);
-  //   const cart = useSelector((state: any) => state.cart);
   const dispatch = useAppDispatch();
   function add() {
-    // setCartAmount((prev) => prev + 1);
     dispatch({
       type: "cart/incrementAmount",
       payload: {
