@@ -1,7 +1,7 @@
 import { auth } from "../firebase/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
-import amazonLogo from "../assets/amazon-logo.png";
+import amazon from "../assets/amazon.png";
 import { useAppDispatch } from "../features/hooks";
 interface FormElements extends HTMLFormControlsCollection {
   email: HTMLInputElement;
@@ -51,7 +51,7 @@ export default function Login() {
   };
   return (
     <div className="log">
-      <img src={amazonLogo} alt="" />
+      <img src={amazon} alt="" />
       <div className="log-container">
         <h1>Sign-In</h1>
         <form onSubmit={handleSubmit}>

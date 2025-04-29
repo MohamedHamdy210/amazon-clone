@@ -1,4 +1,4 @@
-import amazonLogo from "../assets/amazon-logo.png";
+import amazon from "../assets/amazon.png";
 import { useNavigate } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase";
@@ -52,7 +52,7 @@ export default function SignUp() {
   };
   return (
     <div className="log">
-      <img src={amazonLogo} alt="" />
+      <img src={amazon} alt="" />
       <div className="log-container">
         <h1>Sign-Up</h1>
         <form onSubmit={handleSubmit}>
